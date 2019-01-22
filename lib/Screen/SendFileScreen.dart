@@ -12,7 +12,7 @@ class _SendFileScreenState extends State<SendFileScreen> {
          appBar: AppBar(
            title: Text("Virus Total Flutter"),
          ),
-         body: Text('AAA'),
+         body: Text('Construindo'),
        ),
     );
   }
