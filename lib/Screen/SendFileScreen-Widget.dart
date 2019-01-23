@@ -18,11 +18,26 @@ class SendFileWidgetBruno extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text("${virustotalModel.xNameAV}"),
-            Text("${virustotalModel.xResult}"),
-            Text("${virustotalModel.xDetected}")
+            SizedBox(height: 10.0),
+            Text("Av Name -> ${virustotalModel.xNameAV}",
+                style: TextStyle(fontSize: 18.0, color: Colors.grey)),
+            SizedBox(height: 10.0),
+            Text("Result -> ${virustotalModel.xResult}",
+                style: TextStyle(fontSize: 18.0, color: Colors.grey)),
+            SizedBox(height: 10.0),
+            virustotalModel.xDetected == false
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                  )
+                : Icon(
+                    Icons.error,
+                    color: Colors.red,
+                  ),
+            SizedBox(height: 10.0),
+            //Text("${virustotalModel.xDetected}")
           ],
         ),
       ),
